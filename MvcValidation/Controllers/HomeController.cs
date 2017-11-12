@@ -41,9 +41,13 @@ namespace MvcValidation.Controllers
             //    //Mobile is textbox id 
             //    ModelState.AddModelError("Mobile", "Please enter your mobile no");
             //}
+            employee.CompanyId = 2;
             if (ModelState.IsValid)
             {
-                return View("Index");
+               
+                TempData["Success"] = "Add successfully.";
+                ModelState.Clear();
+                RedirectToAction("Index", "Home");
 
             }
             return View("Index");

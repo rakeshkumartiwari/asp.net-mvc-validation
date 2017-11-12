@@ -7,6 +7,8 @@ namespace MvcValidation.Models
 {
     public class Employee
     {
+        
+        public int CompanyId { get; set; }
         [Required(ErrorMessage = "Please Enter Name.")]
         [Display(Name = "Name")]
         public string Name { get; set; }
